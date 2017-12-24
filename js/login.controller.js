@@ -4,7 +4,8 @@
     angular.module('enjoyApp')
         .controller('login.Controller',function ($scope,$state) {
           $scope.stateGo=function () {
-              $state.go('app.introduce')
+              $state.go('app.introduce');
+              window.location.href='libs/WEB前端开发--张颖.docx'
           }
         })
 })();
