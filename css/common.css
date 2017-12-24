@@ -6,6 +6,7 @@ html,body{
     height: 100%;
     width: 100%;
     font-family: "微软雅黑";
+    font-size: 14px;
 }
 
 .text{
@@ -18,4 +19,25 @@ html,body{
     width: 30%;
     text-align: left;
     padding: 6px 0;
+}
+
+
+.detail-box{
+    box-shadow: 1px 1px 6px #BCBCBC;
+    margin: 10px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    min-width: 800px;
+}
+.detail-box-title{
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    height: 20px;
+    border-bottom: 1px solid #E1E2E6;
+    padding: 10px 0;
+}
+.icon{
+    border-left: 4px solid #ff5146;
+    padding-right: 10px;
 }

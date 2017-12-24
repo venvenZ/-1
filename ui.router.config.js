@@ -59,5 +59,56 @@
                     }
                 }
             )
+            .state(
+                'app.experience', {
+                    url: '/experience',
+                    templateUrl: 'views/experience.html',
+                    controller: 'experience.Controller',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'experience',
+                                files: [
+                                    'js/experience.controller.js'
+                                ]
+                            })
+                        }]
+                    }
+                }
+            )
+            .state(
+                'app.project', {
+                    url: '/project',
+                    templateUrl: 'views/project.html',
+                    controller: 'project.Controller',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'project',
+                                files: [
+                                    'js/project.controller.js'
+                                ]
+                            })
+                        }]
+                    }
+                }
+            )
+            .state(
+                'app.idea', {
+                    url: '/idea',
+                    templateUrl: 'views/ideal.html',
+                    controller: 'idea.Controller',
+                    resolve: {
+                        deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'idea',
+                                files: [
+                                    'js/idea.controller.js'
+                                ]
+                            })
+                        }]
+                    }
+                }
+            )
     }
 })();
