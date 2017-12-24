@@ -37,19 +37,34 @@
         padding-left: -5px;
         background: #1A1F2C !important;
     }
+    .shou{
+        padding: 0 0 0 80px;
+    }
+    .paddingright{
+        padding-right: 10px;
+    }
+    .marginLeft{
+        margin-left: 55px !important;
+    }
 </style>
 <div class="outer">
     <div class="A">
         <div>
-            <img src="img/logo.jpg" style="width: 50px;height: 50px;border-radius: 100%;margin-left:155px"></div>
+            <img src="img/logo.jpg" style="width: 50px;height: 50px;border-radius: 100%;margin-left:155px;cursor: pointer" ng-class="{'marginLeft':showLeft}" ng-click="showLeft=!showLeft"></div>
     </div>
-    <div class="B">
-        <div style="width: 180px;height: 100%;background:#283044; position: absolute;top: 0;left: 0;height: 100%;">
-            <div class="nav" ng-click="stateGo(0)" ng-class="{'selected':index==0}"><i class="iconfont icon-guanliyuan"></i>个人介绍</div>
-            <div class="nav" ng-click="stateGo(1)" ng-class="{'selected':index==1}"><i class="iconfont icon-wodeshouye"></i>求职意向</div>
-            <div class="nav" ng-click="stateGo(2)" ng-class="{'selected':index==2}"><i class="iconfont icon-jiankongkanban"></i>工作经历</div>
-            <div class="nav" ng-click="stateGo(3)" ng-class="{'selected':index==3}"><i class="iconfont icon-jiaoyiguanli"></i>项目经验</div>
+    <div class="B" ng-class="{'shou':showLeft}">
+        <div style="width: 180px;height: 100%;background:#283044; position: absolute;top: 0;left: 0;height: 100%;" ng-show="!showLeft">
+            <div class="nav" ng-click="stateGo(0)" ng-class="{'selected':index==0}"><i class="iconfont icon-guanliyuan paddingright"></i>个人介绍</div>
+            <div class="nav" ng-click="stateGo(1)" ng-class="{'selected':index==1}"><i class="iconfont icon-wodeshouye paddingright"></i>求职意向</div>
+            <div class="nav" ng-click="stateGo(2)" ng-class="{'selected':index==2}"><i class="iconfont icon-jiankongkanban paddingright"></i>工作经历</div>
+            <div class="nav" ng-click="stateGo(3)" ng-class="{'selected':index==3}"><i class="iconfont icon-jiaoyiguanli paddingright"></i>项目经验</div>
         </div>
-        <div ui-view="" style="overflow: auto;height: 100%;width: 100%"></div>
+        <div style="width: 80px;height: 100%;background:#283044; position: absolute;top: 0;left: 0;height: 100%;" ng-show="showLeft">
+            <div class="nav" ng-click="stateGo(0)" ng-class="{'selected':index==0}"><i class="iconfont icon-guanliyuan"></i></div>
+            <div class="nav" ng-click="stateGo(1)" ng-class="{'selected':index==1}"><i class="iconfont icon-wodeshouye"></i></div>
+            <div class="nav" ng-click="stateGo(2)" ng-class="{'selected':index==2}"><i class="iconfont icon-jiankongkanban"></i></div>
+            <div class="nav" ng-click="stateGo(3)" ng-class="{'selected':index==3}"><i class="iconfont icon-jiaoyiguanli"></i></div>
+        </div>
+        <div ui-view="" style="overflow: auto;height: 100%;width: 100%" ></div>
     </div>
 </div>
