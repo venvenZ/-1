@@ -54,7 +54,7 @@
                 ],
                 series: [
                     {
-                        name: '成绩单',
+                        name: '优势',
                         type: 'radar',
                         radarIndex: 1,
                         data: [
