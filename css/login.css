@@ -1,0 +1,22 @@
+.loginBg{
+    background-image: url('../img/login.png');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+.loginImage{
+    border: 5px solid gainsboro;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -100px;
+}
+.loginLogo{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}

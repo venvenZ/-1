@@ -1,0 +1,54 @@
+<style>
+    .outer {
+        height: 100%;
+        padding: 50px 0 0;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .A {
+        height: 50px;
+        background: #ff5146;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .B {
+        height: 100%;
+        padding: 0 0 0 180px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .nav{
+        padding: 10px;
+        color:white;
+        text-align: center;
+        border-bottom: 1px solid #394052
+    }
+    .nav:hover{
+        background: #394053;
+        cursor: pointer;
+    }
+    .selected{
+        border-left:5px solid red;
+        padding-left: -5px;
+        background: #1A1F2C !important;
+    }
+</style>
+<div class="outer">
+    <div class="A">
+        <div><img src="img/logo.jpg" style="width: 50px;height: 50px;"></div>
+    </div>
+    <div class="B">
+        <div style="width: 180px;height: 100%;background:#283044; position: absolute;top: 0;left: 0;height: 100%;">
+            <div class="nav" ng-click="stateGo(0)" ng-class="{'selected':index==0}"><i class="iconfont icon-guanliyuan"></i>个人介绍</div>
+            <div class="nav" ng-click="stateGo(1)" ng-class="{'selected':index==1}"><i class="iconfont icon-wodeshouye"></i>求职意向</div>
+            <div class="nav" ng-click="stateGo(2)" ng-class="{'selected':index==2}"><i class="iconfont icon-jiankongkanban"></i>工作经历</div>
+            <div class="nav" ng-click="stateGo(3)" ng-class="{'selected':index==3}"><i class="iconfont icon-jiaoyiguanli"></i>项目经验</div>
+
+        </div>
+        <div ui-view="" style="overflow: auto;height: 100%;width: 100%"></div>
+    </div>
+</div>
