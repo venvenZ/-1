@@ -16,7 +16,7 @@
                             {value:300, name:'git'},
                             {value:300, name:'svn'},
                             {value:360, name:'html5+css3'},
-                            {value:380, name:'jquery+bootStript'}
+                            {value:380, name:'jquery+bootStrap'}
                         ]
                     }
                 ]
